@@ -1,24 +1,21 @@
 package com.codelytical.lyticalsimilarity
 
+import android.Manifest
 import android.content.Context
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.graphics.ImageFormat
 import android.graphics.Matrix
-import android.graphics.Rect
-import android.Manifest
-import android.graphics.YuvImage
 import android.media.ExifInterface
 import android.media.Image
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.annotation.OptIn
+import androidx.appcompat.app.AppCompatActivity
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ExperimentalGetImage
 import androidx.camera.core.ImageCapture
@@ -26,15 +23,12 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.ImageProxy
 import androidx.camera.core.Preview
 import androidx.camera.lifecycle.ProcessCameraProvider
-import androidx.camera.view.PreviewView
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.codelytical.lyticalrecognition.FaceRecognitionManager
-import com.codelytical.lyticalrecognition.mobilefacenet.MobileFaceNet
 import com.codelytical.lyticalrecognition.model.NamedFace
 import com.codelytical.lyticalrecognition.utils.drawableToBitmap
 import com.codelytical.lyticalsimilarity.databinding.ActivityMainBinding
-import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
